@@ -1,0 +1,5 @@
+SELECT TOP 1000 *
+FROM [IDSHub].[TEL].[ElecJournal] ej
+   join [IDSHub].[TEL].[TransactionDef] tr on ej.TranId=Tr.TranId
+   JOIN IDSHub.TEL.CashDrawer CD ON EJ.DrawerId = CD.DrawerId
+ORDER BY ej.CreatedDate DESC;
